@@ -22,10 +22,14 @@ $data = json_decode($json, true);
 $data[] = $reqData;
 $dataJson = json_encode($data, JSON_UNESCAPED_UNICODE);
 
-$file = fopen(__DIR__ . '/data.json', 'w');
-fwrite($file, $dataJson);
-fclose($file);
+$writeResult = file_put_contents(__DIR__ . '/data.json', $dataJson);
 
-http_response_code(200);
-echo 'Data saved';
-exit;
+if ($writeResult) {
+    http_response_code(200);
+    echo 'Data saved';
+    exit;
+} else {
+    http_response_code(500);
+    echo 'Internal server error';
+    exit;
+}
