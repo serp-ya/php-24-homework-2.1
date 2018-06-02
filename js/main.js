@@ -35,7 +35,7 @@ function cleanInputsHandler() {
 }
 
 function saveDataHandler(event) {
-    messageBox.value = null;
+    messageBox.textContent = '';
 
     const data = {
         firstName: firstNameInput.value,
@@ -73,6 +73,6 @@ function saveDataHandler(event) {
             console.error(err);
             
             cleanInputsHandler();
-            messageBox.value = message;
+            messageBox.textContent = message;
         });
 }
