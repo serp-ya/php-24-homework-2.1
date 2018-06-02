@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+iframe {
+    display: inline-block;
+    width: 49%;
+    min-height: 100vh;
+}
+
+tr {
+    border: 1px solid;
+}
+
+td {
+    padding: 5px 10px;
+    border: 1px solid;
+}
+
+label {
+    display: block;
+    padding: 10px 0;
+}
+
+label * {
+    display: block;
+    padding-bottom: 5px;
+}
+
+.ui {
+    display: inline-block;
+    padding: 0 30px;
+    width: 49%;
+    vertical-align: top;
+}

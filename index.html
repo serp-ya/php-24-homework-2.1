@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lesson-6</title>
+
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+    <h1>Телефонная книга:</h1>
+
+    <div>
+        <iframe class="js_mainFrame" src="./phoneTemplateEngine.php" frameborder="0"></iframe>
+    
+        <div class="ui">
+            <h3>Добавить контакт:</h3>
+    
+            <label>
+                Имя: <input class="js_firstName" type="text">
+            </label>
+    
+            <label>
+                Фамилия: <input class="js_lastName" type="text">
+            </label>
+    
+            <label>
+                Адрес: <input class="js_address" type="text">
+            </label>
+    
+            <label>
+                Телефон: <input class="js_phoneNumber" type="text">
+            </label>
+    
+            <div class="js_messageBox"></div>
+    
+            <button class="js_cleanBtn">Очистить</button>
+            <button class="js_saveBtn">Сохранить</button>
+        </div>
+    </div>
+
+    <hr />
+
+    <script src="./js/main.js"></script>
+
+</body>
+</html>
