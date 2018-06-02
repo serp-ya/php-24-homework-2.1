@@ -17,12 +17,12 @@ if (empty($reqData) || !$reqData) {
     exit;
 }
 
-$json = file_get_contents(__DIR__ . './data.json');
+$json = file_get_contents(__DIR__ . '/data.json');
 $data = json_decode($json, true);
 $data[] = $reqData;
 $dataJson = json_encode($data, JSON_UNESCAPED_UNICODE);
 
-$file = fopen('./data.json', 'w');
+$file = fopen(__DIR__ . '/data.json', 'w');
 fwrite($file, $dataJson);
 fclose($file);
 
